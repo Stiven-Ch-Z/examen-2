@@ -50,7 +50,7 @@
             lbltextoderellenoxd.Size = new Size(258, 31);
             lbltextoderellenoxd.TabIndex = 0;
             lbltextoderellenoxd.Text = "Registrador de Usuarios";
-            lbltextoderellenoxd.Click += this.lbltextoderellenoxd_Click;
+            
             // 
             // lblnombre
             // 
