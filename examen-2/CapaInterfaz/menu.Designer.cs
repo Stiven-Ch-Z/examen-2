@@ -63,6 +63,7 @@
             btnusuario.TabIndex = 2;
             btnusuario.Text = "Ingresar Un Usuario Al Sistema";
             btnusuario.UseVisualStyleBackColor = true;
+            btnusuario.Click += btnusuario_Click;
             // 
             // btnhistorial
             // 

@@ -6,5 +6,11 @@ namespace examen_2
         {
             InitializeComponent();
         }
+
+        private void btnusuario_Click(object sender, EventArgs e)
+        {
+            agregar nuevaventana = new agregar();
+            nuevaventana.ShowDialog();
+        }
     }
 }
