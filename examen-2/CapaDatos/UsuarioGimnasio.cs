@@ -11,35 +11,35 @@ namespace examen_2.CapaDatos
 
     public class UsuarioGimnasio : examen_2.CapaDatos.Persona
     {
-        public double Peso { get; set; }
-        public double Altura { get; set; }
-        public string NumeroMembresia { get; set; }
+        public int NumeroMembresia { get; set; }
         public string TipoMembresia { get; set; }
         public DateTime FechaHoraIngreso { get; set; }
 
-        //constructor que llama la clase Persona
-        public UsuarioGimnasio(string nombre, int edad, double peso, double altura, string numeroMembresia, string tipoMembresia, DateTime fechaHoraIngreso)
-            : base(nombre, edad) // hace llamado el constructor de persona
+        public string Calificacion
         {
-            Peso = peso;
-            Altura = altura;
-            NumeroMembresia = numeroMembresia;
-            TipoMembresia = tipoMembresia;
-            FechaHoraIngreso = fechaHoraIngreso;
+            get 
+            {
+                if (Edad < 18) return "Adolescente";
+                else if (Edad < 60) return "Adulto";
+                else return "Adulto Mayor";
+            }
+        
         }
-        public UsuarioGimnasio(string nombre, int edad, double peso, double altura, string numeroMembresia, string tipoMembresia)
-            : base(nombre, edad) // hace un segundo llamado el constructor de persona
+
+        //constructor
+
+        public UsuarioGimnasio(string nombre, int edad, int numeroMembresia, string tipoMembresia)
         {
-            Peso = peso;
-            Altura = altura;
+            Nombre=nombre;
+            Edad=edad;
             NumeroMembresia = numeroMembresia;
             TipoMembresia = tipoMembresia;
-
+            FechaHoraIngreso = DateTime.Now;
         }
 
         public string MostrarInformacion()
         {
-            return $"Nombre: {Nombre}\nEdad {Edad}\nPeso {Peso} Kg \nAltura {Altura}\nNumeroMembresia {NumeroMembresia}\nTipoMembresia {TipoMembresia}\nFechaHoraIngreso{FechaHoraIngreso}";
+            return $"Nombre: {Nombre}\nEdad {Edad}\nNumeroMembresia {NumeroMembresia}\nTipoMembresia {TipoMembresia}\nFechaHoraIngreso{FechaHoraIngreso}";
         }
     }
 }

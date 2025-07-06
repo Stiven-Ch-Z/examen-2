@@ -73,6 +73,7 @@
             btnhistorial.TabIndex = 3;
             btnhistorial.Text = "Ver Historial De Ingresos";
             btnhistorial.UseVisualStyleBackColor = true;
+            btnhistorial.Click += btnhistorial_Click;
             // 
             // btnsalir
             // 
@@ -82,6 +83,7 @@
             btnsalir.TabIndex = 4;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
+            btnsalir.Click += btnsalir_Click;
             // 
             // menu
             // 

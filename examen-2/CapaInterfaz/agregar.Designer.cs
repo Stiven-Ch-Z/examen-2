@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lbltextoderellenoxd = new Label();
             lblnombre = new Label();
             lblmenbr = new Label();
@@ -39,6 +40,8 @@
             btnvolver = new Button();
             btningresar = new Button();
             lbltipomembre = new Label();
+            errorProvideragregar = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvideragregar).BeginInit();
             SuspendLayout();
             // 
             // lbltextoderellenoxd
@@ -116,6 +119,7 @@
             btnvolver.TabIndex = 8;
             btnvolver.Text = "Volver";
             btnvolver.UseVisualStyleBackColor = true;
+            btnvolver.Click += btnvolver_Click;
             // 
             // btningresar
             // 
@@ -125,6 +129,7 @@
             btningresar.TabIndex = 9;
             btningresar.Text = "Ingresar";
             btningresar.UseVisualStyleBackColor = true;
+            btningresar.Click += btningresar_Click;
             // 
             // lbltipomembre
             // 
@@ -134,6 +139,10 @@
             lbltipomembre.Size = new Size(141, 20);
             lbltipomembre.TabIndex = 10;
             lbltipomembre.Text = "Tipo de membresia:";
+            // 
+            // errorProvideragregar
+            // 
+            errorProvideragregar.ContainerControl = this;
             // 
             // agregar
             // 
@@ -153,6 +162,8 @@
             Controls.Add(lbltextoderellenoxd);
             Name = "agregar";
             Text = "Agregar Usuario";
+            Load += agregar_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProvideragregar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,5 +181,6 @@
         private Button btnvolver;
         private Button btningresar;
         private Label lbltipomembre;
+        private ErrorProvider errorProvideragregar;
     }
 }

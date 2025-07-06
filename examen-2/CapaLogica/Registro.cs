@@ -10,17 +10,15 @@ namespace examen_2.CapaLogica
     {
         private static List<UsuarioGimnasio> listaUsuarios = new List<UsuarioGimnasio>();
 
-        public static bool AgregarUsuario(string nombre, int edad, double peso, double altura, string numeroMembresia, string tipoMembresia)
+        public static bool AgregarUsuario(string nombre, int edad, int numeroMembresia, string tipoMembresia)
         {
-            UsuarioGimnasio usuario = new(nombre, edad, peso, altura, numeroMembresia, tipoMembresia);
+            UsuarioGimnasio usuario = new(nombre, edad, numeroMembresia, tipoMembresia);
             if (!listaUsuarios.Any(x => x.NumeroMembresia == usuario.NumeroMembresia))
             {
                 listaUsuarios.Add(usuario);
                 return true;
             }
             return false;
-        
-        
         }
         public static List<UsuarioGimnasio> IncorporarUsuarios()
         {
