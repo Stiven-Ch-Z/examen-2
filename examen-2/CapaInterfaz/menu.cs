@@ -8,15 +8,15 @@ namespace examen_2
         }
         private void btnhistorial_Click(object sender, EventArgs e)
         {
-            historial historial = new historial();
-            this.Hide();
-            historial.ShowDialog();
-            this.Show();
+            historial historial = new historial();//aqui se crea el form historial
+            this.Hide();// esto hace que se cierre el form menu 
+            historial.ShowDialog(); //esto muestra el historial pero no permite que se muestre menu hasta que historial sea cerrado
+            this.Show(); // cuando se cierra historial vuelve a aparecer el form menu 
         }
 
         private void btnusuario_Click(object sender, EventArgs e)
         {
-            agregar agregar = new agregar();
+            agregar agregar = new agregar(); // lo mismo de arriba
             this.Hide();
             agregar.ShowDialog();
             this.Show();
@@ -29,6 +29,7 @@ namespace examen_2
             {
                 Application.Exit();
             }
+            //al hacer click le va a aparecer al usuario un messagebox con si y no, si se preciona SI el formulario menu va a cerrarse
         }
     }
 }

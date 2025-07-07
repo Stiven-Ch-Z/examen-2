@@ -12,8 +12,8 @@ namespace examen_2.CapaDatos
         // Clase base
         public class Persona
         {
-            public string Nombre {  get; set; }
-            public int Edad {  get; set; }
+            public string Nombre {  get; set; }  //esta es la propiedad del nombre
+            public int Edad {  get; set; } //y esta la de la edad
         }
     
     }

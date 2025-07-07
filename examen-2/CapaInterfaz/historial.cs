@@ -27,19 +27,18 @@ namespace examen_2
         private void btnactualizar_Click(object sender, EventArgs e)
         {
         
-            List<UsuarioGimnasio> listaUsuarios = Registro.IncorporarUsuarios(); // Asegúrate de tener este método en tu clase Registro
+            List<UsuarioGimnasio> listaUsuarios = Registro.IncorporarUsuarios();  //aqui se llama el metodo de incorporarusuarios
+            dataGridView1.AutoGenerateColumns = true; //aqui se crean las columnas automaticamente basandose en los objetos de la lista
+            dataGridView1.DataSource = null; //esto limpia el datagrind 
+            dataGridView1.DataSource = listaUsuarios; //y aqui se agrega la lista al datagrind
 
-            dataGridView1.AutoGenerateColumns = true; // Auto-generar columnas según las propiedades de Usuario
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listaUsuarios;
-
-            lbltotal.Text = $"Total de Usuarios: {Registro.TotalUsuarios().ToString()}";
+            lbltotal.Text = $"Total de Usuarios: {Registro.TotalUsuarios().ToString()}"; //aqui se actualiza el label para mostrar el total de usuarios que hay
         }
         
 
         private void btnvolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); 
         }
     }
 }
