@@ -6,6 +6,13 @@ namespace examen_2
         {
             InitializeComponent();
         }
+        private void btnhistorial_Click(object sender, EventArgs e)
+        {
+            historial historial = new historial();
+            this.Hide();
+            historial.ShowDialog();
+            this.Show();
+        }
 
         private void btnusuario_Click(object sender, EventArgs e)
         {
@@ -15,17 +22,13 @@ namespace examen_2
             this.Show();
         }
 
-        private void btnhistorial_Click(object sender, EventArgs e)
-        {
-            historial historial = new historial();
-            this.Hide();
-            historial.ShowDialog();
-            this.Show();
-        }
-
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

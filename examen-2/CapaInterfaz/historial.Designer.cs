@@ -32,6 +32,7 @@
             dataGridView1 = new DataGridView();
             btnvolver = new Button();
             btnactualizar = new Button();
+            lbltotal = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             lbltextogrande.AutoSize = true;
             lbltextogrande.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltextogrande.Location = new Point(145, 19);
+            lbltextogrande.Location = new Point(217, 23);
             lbltextogrande.Name = "lbltextogrande";
             lbltextogrande.Size = new Size(258, 31);
             lbltextogrande.TabIndex = 0;
@@ -51,38 +52,51 @@
             dataGridView1.Location = new Point(70, 91);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(415, 381);
+            dataGridView1.Size = new Size(576, 381);
             dataGridView1.TabIndex = 1;
             // 
             // btnvolver
             // 
-            btnvolver.Location = new Point(441, 505);
+            btnvolver.Location = new Point(601, 501);
             btnvolver.Name = "btnvolver";
             btnvolver.Size = new Size(94, 29);
             btnvolver.TabIndex = 2;
             btnvolver.Text = "Volver";
             btnvolver.UseVisualStyleBackColor = true;
+            btnvolver.Click += btnvolver_Click;
             // 
             // btnactualizar
             // 
-            btnactualizar.Location = new Point(31, 505);
+            btnactualizar.Location = new Point(501, 501);
             btnactualizar.Name = "btnactualizar";
             btnactualizar.Size = new Size(94, 29);
             btnactualizar.TabIndex = 3;
             btnactualizar.Text = "Actualizar";
             btnactualizar.UseVisualStyleBackColor = true;
+            btnactualizar.Click += btnactualizar_Click;
+            // 
+            // lbltotal
+            // 
+            lbltotal.AutoSize = true;
+            lbltotal.Location = new Point(29, 505);
+            lbltotal.Name = "lbltotal";
+            lbltotal.Size = new Size(138, 20);
+            lbltotal.TabIndex = 4;
+            lbltotal.Text = "Total de Usuarios: 0";
             // 
             // historial
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 546);
+            ClientSize = new Size(707, 546);
+            Controls.Add(lbltotal);
             Controls.Add(btnactualizar);
             Controls.Add(btnvolver);
             Controls.Add(dataGridView1);
             Controls.Add(lbltextogrande);
             Name = "historial";
             Text = "historial";
+            Load += historial_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -94,5 +108,6 @@
         private DataGridView dataGridView1;
         private Button btnvolver;
         private Button btnactualizar;
+        private Label lbltotal;
     }
 }

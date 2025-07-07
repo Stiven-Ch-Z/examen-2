@@ -41,7 +41,12 @@
             btningresar = new Button();
             lbltipomembre = new Label();
             errorProvideragregar = new ErrorProvider(components);
+            contextMenuagregar = new ContextMenuStrip(components);
+            cambiarElColorDelFondoToolStripMenuItem = new ToolStripMenuItem();
+            mostrarTotalDeIngresosToolStripMenuItem = new ToolStripMenuItem();
+            salirDelSistemaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)errorProvideragregar).BeginInit();
+            contextMenuagregar.SuspendLayout();
             SuspendLayout();
             // 
             // lbltextoderellenoxd
@@ -144,11 +149,40 @@
             // 
             errorProvideragregar.ContainerControl = this;
             // 
+            // contextMenuagregar
+            // 
+            contextMenuagregar.ImageScalingSize = new Size(20, 20);
+            contextMenuagregar.Items.AddRange(new ToolStripItem[] { cambiarElColorDelFondoToolStripMenuItem, mostrarTotalDeIngresosToolStripMenuItem, salirDelSistemaToolStripMenuItem });
+            contextMenuagregar.Name = "contextMenuagregar";
+            contextMenuagregar.Size = new Size(258, 76);
+            // 
+            // cambiarElColorDelFondoToolStripMenuItem
+            // 
+            cambiarElColorDelFondoToolStripMenuItem.Name = "cambiarElColorDelFondoToolStripMenuItem";
+            cambiarElColorDelFondoToolStripMenuItem.Size = new Size(257, 24);
+            cambiarElColorDelFondoToolStripMenuItem.Text = "Cambiar el color del fondo";
+            cambiarElColorDelFondoToolStripMenuItem.Click += cambiarElColorDelFondoToolStripMenuItem_Click;
+            // 
+            // mostrarTotalDeIngresosToolStripMenuItem
+            // 
+            mostrarTotalDeIngresosToolStripMenuItem.Name = "mostrarTotalDeIngresosToolStripMenuItem";
+            mostrarTotalDeIngresosToolStripMenuItem.Size = new Size(257, 24);
+            mostrarTotalDeIngresosToolStripMenuItem.Text = "Mostrar Total de ingresos";
+            mostrarTotalDeIngresosToolStripMenuItem.Click += mostrarTotalDeIngresosToolStripMenuItem_Click;
+            // 
+            // salirDelSistemaToolStripMenuItem
+            // 
+            salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
+            salirDelSistemaToolStripMenuItem.Size = new Size(257, 24);
+            salirDelSistemaToolStripMenuItem.Text = "Salir del sistema";
+            salirDelSistemaToolStripMenuItem.Click += salirDelSistemaToolStripMenuItem_Click;
+            // 
             // agregar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(521, 472);
+            ContextMenuStrip = contextMenuagregar;
             Controls.Add(lbltipomembre);
             Controls.Add(btningresar);
             Controls.Add(btnvolver);
@@ -164,6 +198,7 @@
             Text = "Agregar Usuario";
             Load += agregar_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvideragregar).EndInit();
+            contextMenuagregar.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +217,9 @@
         private Button btningresar;
         private Label lbltipomembre;
         private ErrorProvider errorProvideragregar;
+        private ContextMenuStrip contextMenuagregar;
+        private ToolStripMenuItem cambiarElColorDelFondoToolStripMenuItem;
+        private ToolStripMenuItem mostrarTotalDeIngresosToolStripMenuItem;
+        private ToolStripMenuItem salirDelSistemaToolStripMenuItem;
     }
 }
