@@ -37,61 +37,73 @@
             // 
             // lblwelcome
             // 
+            lblwelcome.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblwelcome.AutoSize = true;
             lblwelcome.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblwelcome.Location = new Point(123, 24);
+            lblwelcome.Location = new Point(196, 18);
             lblwelcome.Name = "lblwelcome";
-            lblwelcome.Size = new Size(299, 31);
+            lblwelcome.Size = new Size(247, 25);
             lblwelcome.TabIndex = 0;
             lblwelcome.Text = "¡Bienvenido a Vital Training!";
             // 
             // lblchoose
             // 
+            lblchoose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblchoose.AutoSize = true;
             lblchoose.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblchoose.Location = new Point(168, 69);
+            lblchoose.Location = new Point(235, 52);
             lblchoose.Name = "lblchoose";
-            lblchoose.Size = new Size(215, 25);
+            lblchoose.Size = new Size(179, 20);
             lblchoose.TabIndex = 1;
             lblchoose.Text = "Por Favor Elija una opcion";
             // 
             // btnusuario
             // 
-            btnusuario.Location = new Point(158, 160);
+            btnusuario.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnusuario.Location = new Point(226, 120);
+            btnusuario.Margin = new Padding(3, 2, 3, 2);
             btnusuario.Name = "btnusuario";
-            btnusuario.Size = new Size(240, 29);
+            btnusuario.Size = new Size(210, 22);
             btnusuario.TabIndex = 2;
             btnusuario.Text = "Ingresar Un Usuario Al Sistema";
             btnusuario.UseVisualStyleBackColor = true;
+            btnusuario.Click += btnusuario_Click;
             // 
             // btnhistorial
             // 
-            btnhistorial.Location = new Point(179, 230);
+            btnhistorial.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnhistorial.Location = new Point(245, 172);
+            btnhistorial.Margin = new Padding(3, 2, 3, 2);
             btnhistorial.Name = "btnhistorial";
-            btnhistorial.Size = new Size(204, 29);
+            btnhistorial.Size = new Size(178, 22);
             btnhistorial.TabIndex = 3;
             btnhistorial.Text = "Ver Historial De Ingresos";
             btnhistorial.UseVisualStyleBackColor = true;
+            btnhistorial.Click += btnhistorial_Click;
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(220, 302);
+            btnsalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnsalir.Location = new Point(280, 226);
+            btnsalir.Margin = new Padding(3, 2, 3, 2);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(103, 29);
+            btnsalir.Size = new Size(90, 22);
             btnsalir.TabIndex = 4;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
+            btnsalir.Click += btnsalir_Click;
             // 
             // menu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(558, 406);
+            ClientSize = new Size(576, 304);
             Controls.Add(btnsalir);
             Controls.Add(btnhistorial);
             Controls.Add(btnusuario);
             Controls.Add(lblchoose);
             Controls.Add(lblwelcome);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "menu";
             Text = "Menu";
             ResumeLayout(false);
