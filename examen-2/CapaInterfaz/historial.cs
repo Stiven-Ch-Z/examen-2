@@ -28,13 +28,36 @@ namespace examen_2
         {
         
             List<UsuarioGimnasio> listaUsuarios = Registro.IncorporarUsuarios();  //aqui se llama el metodo de incorporarusuarios
-            dataGridView1.AutoGenerateColumns = true; //aqui se crean las columnas automaticamente basandose en los objetos de la lista
-            dataGridView1.DataSource = null; //esto limpia el datagrind 
-            dataGridView1.DataSource = listaUsuarios; //y aqui se agrega la lista al datagrind
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
 
-            lbltotal.Text = $"Total de Usuarios: {Registro.TotalUsuarios().ToString()}"; //aqui se actualiza el label para mostrar el total de usuarios que hay
+            // se Definen las columnas manualmente (incluye Calificación)
+            dataGridView1.Columns.Add("Nombre", "Nombre");
+            dataGridView1.Columns.Add("Edad", "Edad");
+            dataGridView1.Columns.Add("NumeroMembresia", "Número de Membresía");
+            dataGridView1.Columns.Add("TipoMembresia", "Tipo de Membresía");
+            dataGridView1.Columns.Add("FechaHoraIngreso", "Fecha y Hora de Ingreso");
+            dataGridView1.Columns.Add("Calificacion", "Calificación por Edad");
+
+            // y se Usa foreach para agregar los datos al DataGridView
+            foreach (UsuarioGimnasio usuario in listaUsuarios)
+            {
+                dataGridView1.Rows.Add(
+                    usuario.Nombre,
+                    usuario.Edad,
+                    usuario.NumeroMembresia,
+                    usuario.TipoMembresia,
+                    usuario.FechaHoraIngreso.ToString("g"), 
+                    usuario.Calificacion 
+                );
+            }
+
+            // Mostrar total de usuarios con el label
+            lbltotal.Text = $"Total de Usuarios: {Registro.TotalUsuarios()}";
         }
-        
+
+
+
 
         private void btnvolver_Click(object sender, EventArgs e)
         {
